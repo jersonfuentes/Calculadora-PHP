@@ -3,17 +3,46 @@
     <title>PHP Test</title>
   </head>
   <body>
-    <?php 
-    echo '<p>Hello World</p>'; 
+    <?php
+      echo '<p>Selector de Clima</p>'; 
     
-    function suma(){
-      $valor1 = 8; 
-      $valor2 = 6;
-      $resultado = $valor1 + $valor2;
-      print_r($resultado);
+function recomendacion(){
+    
+    $clima = array (
+      "Bogota" => "Frio", 
+      "Monteria" => "Calido", 
+      "Medellin" => "Templado" );
+
+    $ubicacion = array (
+      "Guajira" => "Norte", 
+      "Leticia" => "Sur", 
+      "Santander" => "Este", 
+      "Antioquia" => "Oeste");
+
+    $turismo = array (
+      "Santa Marta" => "Mar", 
+      "Villavicencio" => "Llanos", 
+      "Riocha" => "Desierto", 
+      "Quindio" => "Valle");
+
+    switch("clima"){
+      
+            case "clima":
+                echo array_search("Frio", $clima);
+                break;
+            case "ubicacion":
+                echo array_search("Norte", $ubicacion);
+                break; 
+            case "turismo":
+                echo array_search("Mar", $turismo);
+                break; 
+            } 
     }
-     suma();
-    ?> 
+
+    recomendacion();
+
+    ?>
+    
     <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
   </body>
 </html>
